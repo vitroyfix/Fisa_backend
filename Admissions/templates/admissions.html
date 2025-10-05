@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admissions List</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        table {
+            width: 90%;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: left;
+            vertical-align: top;
+        }
+        th { background-color: #f4f4f4; }
+        h1 { text-align: center; }
+        td { word-wrap: break-word; }
+    </style>
+</head>
+<body>
+    <h1>Admissions</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+                <th>Reg Number</th>
+                <th>Course</th>
+                <th>Year</th>
+                <th>Comments</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for admission in admissions %}
+            <tr>
+                <td>{{ admission.first_name }}</td>
+                <td>{{ admission.last_name }}</td>
+                <td>{{ admission.email }}</td>
+                <td>{{ admission.phone_number }}</td>
+                <td>{{ admission.reg_number }}</td>
+                <td>{{ admission.course }}</td>
+                <td>{{ admission.year }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="8" style="text-align:center;">No admissions found.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

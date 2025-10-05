@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Council Members</title>
+</head>
+<body>
+    <h1>Council Members</h1>
+    {% if council_members %}
+        <ul>
+        {% for member in council_members %}
+            <li>{{ member.name }} - {{ member.position }}</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No council members found.</p>
+    {% endif %}
+</body>
+</html>

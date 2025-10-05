@@ -9,6 +9,7 @@ class Admissions(models.Model):
     reg_number = models.CharField(max_length=200)
     course = models.CharField(max_length=200)
     year = models.DateTimeField(default=timezone.now)
+    comments = models.TextField()
 
     def __str__(self):
         return f"({self.first_name}) ({self.last_name}) ({self.course})"

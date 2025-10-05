@@ -1,0 +1,2017 @@
+nohup: ignoring input
+Watching for file changes with StatReloader
+/home/peter/Desktop/Fisa_backend/Admissions/urls.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+October 04, 2025 - 23:22:23
+Django version 5.2.7, using settings 'Fisa_backend.settings'
+Starting development server at http://127.0.0.1:8001/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/5.2/howto/deployment/
+Watching for file changes with StatReloader
+/home/peter/Desktop/Fisa_backend/Fisa_backend/urls.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+October 04, 2025 - 23:22:44
+Django version 5.2.7, using settings 'Fisa_backend.settings'
+Starting development server at http://127.0.0.1:8001/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/5.2/howto/deployment/
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 136, in check_custom_error_handlers
+    handler = resolver.resolve_error_handler(status_code)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 732, in resolve_error_handler
+    callback = getattr(self.urlconf_module, "handler%s" % view_type, None)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 711, in urlconf_module
+    return import_module(self.urlconf_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/peter/Desktop/Fisa_backend/Fisa_backend/urls.py", line 26, in <module>
+    path('attendees/', include('Attendees.urls')),
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'Attendees.urls'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/commands/runserver.py", line 134, in inner_run
+    self.check(**check_kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/base.py", line 492, in check
+    all_issues = checks.run_checks(
+                 ^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/registry.py", line 89, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 138, in check_custom_error_handlers
+    path = getattr(resolver.urlconf_module, "handler%s" % status_code)
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 711, in urlconf_module
+    return import_module(self.urlconf_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/peter/Desktop/Fisa_backend/Fisa_backend/urls.py", line 26, in <module>
+    path('attendees/', include('Attendees.urls')),
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'Attendees.urls'
+/home/peter/Desktop/Fisa_backend/Admissions/views.py changed, reloading.
+Performing system checks...
+
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 136, in check_custom_error_handlers
+    handler = resolver.resolve_error_handler(status_code)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 732, in resolve_error_handler
+    callback = getattr(self.urlconf_module, "handler%s" % view_type, None)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 711, in urlconf_module
+    return import_module(self.urlconf_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/peter/Desktop/Fisa_backend/Fisa_backend/urls.py", line 29, in <module>
+    path('events/', include('Events.urls')),
+                    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'Events.urls'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/commands/runserver.py", line 134, in inner_run
+    self.check(**check_kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/base.py", line 492, in check
+    all_issues = checks.run_checks(
+                 ^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/registry.py", line 89, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 138, in check_custom_error_handlers
+    path = getattr(resolver.urlconf_module, "handler%s" % status_code)
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 711, in urlconf_module
+    return import_module(self.urlconf_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/peter/Desktop/Fisa_backend/Fisa_backend/urls.py", line 29, in <module>
+    path('events/', include('Events.urls')),
+                    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'Events.urls'
+/home/peter/Desktop/Fisa_backend/CouncilMembers/views.py changed, reloading.
+Performing system checks...
+
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 136, in check_custom_error_handlers
+    handler = resolver.resolve_error_handler(status_code)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 732, in resolve_error_handler
+    callback = getattr(self.urlconf_module, "handler%s" % view_type, None)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 711, in urlconf_module
+    return import_module(self.urlconf_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/peter/Desktop/Fisa_backend/Fisa_backend/urls.py", line 29, in <module>
+    path('events/', include('Events.urls')),
+                    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'Events.urls'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/commands/runserver.py", line 134, in inner_run
+    self.check(**check_kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/base.py", line 492, in check
+    all_issues = checks.run_checks(
+                 ^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/registry.py", line 89, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 138, in check_custom_error_handlers
+    path = getattr(resolver.urlconf_module, "handler%s" % status_code)
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 711, in urlconf_module
+    return import_module(self.urlconf_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/peter/Desktop/Fisa_backend/Fisa_backend/urls.py", line 29, in <module>
+    path('events/', include('Events.urls')),
+                    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'Events.urls'
+/home/peter/Desktop/Fisa_backend/EventMedia/views.py changed, reloading.
+Performing system checks...
+
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 136, in check_custom_error_handlers
+    handler = resolver.resolve_error_handler(status_code)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 732, in resolve_error_handler
+    callback = getattr(self.urlconf_module, "handler%s" % view_type, None)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 711, in urlconf_module
+    return import_module(self.urlconf_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/peter/Desktop/Fisa_backend/Fisa_backend/urls.py", line 29, in <module>
+    path('events/', include('Events.urls')),
+                    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'Events.urls'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/commands/runserver.py", line 134, in inner_run
+    self.check(**check_kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/base.py", line 492, in check
+    all_issues = checks.run_checks(
+                 ^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/registry.py", line 89, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 138, in check_custom_error_handlers
+    path = getattr(resolver.urlconf_module, "handler%s" % status_code)
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 711, in urlconf_module
+    return import_module(self.urlconf_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/peter/Desktop/Fisa_backend/Fisa_backend/urls.py", line 29, in <module>
+    path('events/', include('Events.urls')),
+                    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'Events.urls'
+/home/peter/Desktop/Fisa_backend/Admissions/__init__.py changed, reloading.
+Performing system checks...
+
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 720, in url_patterns
+    iter(patterns)
+TypeError: 'module' object is not iterable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/commands/runserver.py", line 134, in inner_run
+    self.check(**check_kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/base.py", line 492, in check
+    all_issues = checks.run_checks(
+                 ^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/registry.py", line 89, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 16, in check_url_config
+    return check_resolver(resolver)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+           ^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 532, in check
+    messages.extend(check_resolver(pattern))
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+           ^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 531, in check
+    for pattern in self.url_patterns:
+                   ^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 728, in url_patterns
+    raise ImproperlyConfigured(msg.format(name=self.urlconf_name)) from e
+django.core.exceptions.ImproperlyConfigured: The included URLconf '<module 'Attendees.urls' from '/home/peter/Desktop/Fisa_backend/Attendees/urls.py'>' does not appear to have any patterns in it. If you see the 'urlpatterns' variable with valid patterns in the file then the issue is probably caused by a circular import.
+/home/peter/Desktop/Fisa_backend/Admissions/admin.py changed, reloading.
+Performing system checks...
+
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 720, in url_patterns
+    iter(patterns)
+TypeError: 'module' object is not iterable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/commands/runserver.py", line 134, in inner_run
+    self.check(**check_kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/base.py", line 492, in check
+    all_issues = checks.run_checks(
+                 ^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/registry.py", line 89, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 16, in check_url_config
+    return check_resolver(resolver)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+           ^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 532, in check
+    messages.extend(check_resolver(pattern))
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+           ^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 531, in check
+    for pattern in self.url_patterns:
+                   ^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 728, in url_patterns
+    raise ImproperlyConfigured(msg.format(name=self.urlconf_name)) from e
+django.core.exceptions.ImproperlyConfigured: The included URLconf '<module 'Attendees.urls' from '/home/peter/Desktop/Fisa_backend/Attendees/urls.py'>' does not appear to have any patterns in it. If you see the 'urlpatterns' variable with valid patterns in the file then the issue is probably caused by a circular import.
+/home/peter/Desktop/Fisa_backend/Admissions/apps.py changed, reloading.
+Performing system checks...
+
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 720, in url_patterns
+    iter(patterns)
+TypeError: 'module' object is not iterable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/commands/runserver.py", line 134, in inner_run
+    self.check(**check_kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/base.py", line 492, in check
+    all_issues = checks.run_checks(
+                 ^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/registry.py", line 89, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 16, in check_url_config
+    return check_resolver(resolver)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+           ^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 532, in check
+    messages.extend(check_resolver(pattern))
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+           ^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 531, in check
+    for pattern in self.url_patterns:
+                   ^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 728, in url_patterns
+    raise ImproperlyConfigured(msg.format(name=self.urlconf_name)) from e
+django.core.exceptions.ImproperlyConfigured: The included URLconf '<module 'Attendees.urls' from '/home/peter/Desktop/Fisa_backend/Attendees/urls.py'>' does not appear to have any patterns in it. If you see the 'urlpatterns' variable with valid patterns in the file then the issue is probably caused by a circular import.
+/home/peter/Desktop/Fisa_backend/Admissions/urls.py changed, reloading.
+Performing system checks...
+
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 720, in url_patterns
+    iter(patterns)
+TypeError: 'module' object is not iterable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/commands/runserver.py", line 134, in inner_run
+    self.check(**check_kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/base.py", line 492, in check
+    all_issues = checks.run_checks(
+                 ^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/registry.py", line 89, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 16, in check_url_config
+    return check_resolver(resolver)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+           ^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 532, in check
+    messages.extend(check_resolver(pattern))
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+           ^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 531, in check
+    for pattern in self.url_patterns:
+                   ^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 728, in url_patterns
+    raise ImproperlyConfigured(msg.format(name=self.urlconf_name)) from e
+django.core.exceptions.ImproperlyConfigured: The included URLconf '<module 'Attendees.urls' from '/home/peter/Desktop/Fisa_backend/Attendees/urls.py'>' does not appear to have any patterns in it. If you see the 'urlpatterns' variable with valid patterns in the file then the issue is probably caused by a circular import.
+/home/peter/Desktop/Fisa_backend/Attendees/__init__.py changed, reloading.
+Performing system checks...
+
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 720, in url_patterns
+    iter(patterns)
+TypeError: 'module' object is not iterable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/commands/runserver.py", line 134, in inner_run
+    self.check(**check_kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/base.py", line 492, in check
+    all_issues = checks.run_checks(
+                 ^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/registry.py", line 89, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 16, in check_url_config
+    return check_resolver(resolver)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+           ^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 532, in check
+    messages.extend(check_resolver(pattern))
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+           ^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 531, in check
+    for pattern in self.url_patterns:
+                   ^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 728, in url_patterns
+    raise ImproperlyConfigured(msg.format(name=self.urlconf_name)) from e
+django.core.exceptions.ImproperlyConfigured: The included URLconf '<module 'Attendees.urls' from '/home/peter/Desktop/Fisa_backend/Attendees/urls.py'>' does not appear to have any patterns in it. If you see the 'urlpatterns' variable with valid patterns in the file then the issue is probably caused by a circular import.
+/home/peter/Desktop/Fisa_backend/Attendees/__init__.py changed, reloading.
+Performing system checks...
+
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 720, in url_patterns
+    iter(patterns)
+TypeError: 'module' object is not iterable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/commands/runserver.py", line 134, in inner_run
+    self.check(**check_kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/base.py", line 492, in check
+    all_issues = checks.run_checks(
+                 ^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/registry.py", line 89, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 16, in check_url_config
+    return check_resolver(resolver)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+           ^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 532, in check
+    messages.extend(check_resolver(pattern))
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+           ^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 531, in check
+    for pattern in self.url_patterns:
+                   ^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 728, in url_patterns
+    raise ImproperlyConfigured(msg.format(name=self.urlconf_name)) from e
+django.core.exceptions.ImproperlyConfigured: The included URLconf '<module 'Attendees.urls' from '/home/peter/Desktop/Fisa_backend/Attendees/urls.py'>' does not appear to have any patterns in it. If you see the 'urlpatterns' variable with valid patterns in the file then the issue is probably caused by a circular import.
+/home/peter/Desktop/Fisa_backend/Attendees/apps.py changed, reloading.
+Performing system checks...
+
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 720, in url_patterns
+    iter(patterns)
+TypeError: 'module' object is not iterable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/commands/runserver.py", line 134, in inner_run
+    self.check(**check_kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/base.py", line 492, in check
+    all_issues = checks.run_checks(
+                 ^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/registry.py", line 89, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 16, in check_url_config
+    return check_resolver(resolver)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+           ^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 532, in check
+    messages.extend(check_resolver(pattern))
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+           ^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 531, in check
+    for pattern in self.url_patterns:
+                   ^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 728, in url_patterns
+    raise ImproperlyConfigured(msg.format(name=self.urlconf_name)) from e
+django.core.exceptions.ImproperlyConfigured: The included URLconf '<module 'Attendees.urls' from '/home/peter/Desktop/Fisa_backend/Attendees/urls.py'>' does not appear to have any patterns in it. If you see the 'urlpatterns' variable with valid patterns in the file then the issue is probably caused by a circular import.
+/home/peter/Desktop/Fisa_backend/Attendees/urls.py changed, reloading.
+Performing system checks...
+
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 720, in url_patterns
+    iter(patterns)
+TypeError: 'module' object is not iterable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/commands/runserver.py", line 134, in inner_run
+    self.check(**check_kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/base.py", line 492, in check
+    all_issues = checks.run_checks(
+                 ^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/registry.py", line 89, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 16, in check_url_config
+    return check_resolver(resolver)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+           ^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 532, in check
+    messages.extend(check_resolver(pattern))
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+           ^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 531, in check
+    for pattern in self.url_patterns:
+                   ^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 728, in url_patterns
+    raise ImproperlyConfigured(msg.format(name=self.urlconf_name)) from e
+django.core.exceptions.ImproperlyConfigured: The included URLconf '<module 'NonMembers.urls' from '/home/peter/Desktop/Fisa_backend/NonMembers/urls.py'>' does not appear to have any patterns in it. If you see the 'urlpatterns' variable with valid patterns in the file then the issue is probably caused by a circular import.
+/home/peter/Desktop/Fisa_backend/Attendees/views.py changed, reloading.
+Performing system checks...
+
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 720, in url_patterns
+    iter(patterns)
+TypeError: 'module' object is not iterable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/commands/runserver.py", line 134, in inner_run
+    self.check(**check_kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/base.py", line 492, in check
+    all_issues = checks.run_checks(
+                 ^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/registry.py", line 89, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 16, in check_url_config
+    return check_resolver(resolver)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+           ^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 532, in check
+    messages.extend(check_resolver(pattern))
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+           ^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 531, in check
+    for pattern in self.url_patterns:
+                   ^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 728, in url_patterns
+    raise ImproperlyConfigured(msg.format(name=self.urlconf_name)) from e
+django.core.exceptions.ImproperlyConfigured: The included URLconf '<module 'NonMembers.urls' from '/home/peter/Desktop/Fisa_backend/NonMembers/urls.py'>' does not appear to have any patterns in it. If you see the 'urlpatterns' variable with valid patterns in the file then the issue is probably caused by a circular import.
+/home/peter/Desktop/Fisa_backend/CouncilMembers/__init__.py changed, reloading.
+Performing system checks...
+
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 720, in url_patterns
+    iter(patterns)
+TypeError: 'module' object is not iterable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/commands/runserver.py", line 134, in inner_run
+    self.check(**check_kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/base.py", line 492, in check
+    all_issues = checks.run_checks(
+                 ^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/registry.py", line 89, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 16, in check_url_config
+    return check_resolver(resolver)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+           ^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 532, in check
+    messages.extend(check_resolver(pattern))
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+           ^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 531, in check
+    for pattern in self.url_patterns:
+                   ^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 728, in url_patterns
+    raise ImproperlyConfigured(msg.format(name=self.urlconf_name)) from e
+django.core.exceptions.ImproperlyConfigured: The included URLconf '<module 'NonMembers.urls' from '/home/peter/Desktop/Fisa_backend/NonMembers/urls.py'>' does not appear to have any patterns in it. If you see the 'urlpatterns' variable with valid patterns in the file then the issue is probably caused by a circular import.
+/home/peter/Desktop/Fisa_backend/CouncilMembers/admin.py changed, reloading.
+Performing system checks...
+
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 720, in url_patterns
+    iter(patterns)
+TypeError: 'module' object is not iterable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/commands/runserver.py", line 134, in inner_run
+    self.check(**check_kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/base.py", line 492, in check
+    all_issues = checks.run_checks(
+                 ^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/registry.py", line 89, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 16, in check_url_config
+    return check_resolver(resolver)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+           ^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 532, in check
+    messages.extend(check_resolver(pattern))
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+           ^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 531, in check
+    for pattern in self.url_patterns:
+                   ^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 728, in url_patterns
+    raise ImproperlyConfigured(msg.format(name=self.urlconf_name)) from e
+django.core.exceptions.ImproperlyConfigured: The included URLconf '<module 'NonMembers.urls' from '/home/peter/Desktop/Fisa_backend/NonMembers/urls.py'>' does not appear to have any patterns in it. If you see the 'urlpatterns' variable with valid patterns in the file then the issue is probably caused by a circular import.
+/home/peter/Desktop/Fisa_backend/CouncilMembers/apps.py changed, reloading.
+Performing system checks...
+
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 720, in url_patterns
+    iter(patterns)
+TypeError: 'module' object is not iterable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/commands/runserver.py", line 134, in inner_run
+    self.check(**check_kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/base.py", line 492, in check
+    all_issues = checks.run_checks(
+                 ^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/registry.py", line 89, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 16, in check_url_config
+    return check_resolver(resolver)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+           ^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 532, in check
+    messages.extend(check_resolver(pattern))
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+           ^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 531, in check
+    for pattern in self.url_patterns:
+                   ^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 728, in url_patterns
+    raise ImproperlyConfigured(msg.format(name=self.urlconf_name)) from e
+django.core.exceptions.ImproperlyConfigured: The included URLconf '<module 'NonMembers.urls' from '/home/peter/Desktop/Fisa_backend/NonMembers/urls.py'>' does not appear to have any patterns in it. If you see the 'urlpatterns' variable with valid patterns in the file then the issue is probably caused by a circular import.
+/home/peter/Desktop/Fisa_backend/CouncilMembers/urls.py changed, reloading.
+Performing system checks...
+
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 720, in url_patterns
+    iter(patterns)
+TypeError: 'module' object is not iterable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/commands/runserver.py", line 134, in inner_run
+    self.check(**check_kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/base.py", line 492, in check
+    all_issues = checks.run_checks(
+                 ^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/registry.py", line 89, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 16, in check_url_config
+    return check_resolver(resolver)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+           ^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 532, in check
+    messages.extend(check_resolver(pattern))
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+           ^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 531, in check
+    for pattern in self.url_patterns:
+                   ^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 728, in url_patterns
+    raise ImproperlyConfigured(msg.format(name=self.urlconf_name)) from e
+django.core.exceptions.ImproperlyConfigured: The included URLconf '<module 'NonMembers.urls' from '/home/peter/Desktop/Fisa_backend/NonMembers/urls.py'>' does not appear to have any patterns in it. If you see the 'urlpatterns' variable with valid patterns in the file then the issue is probably caused by a circular import.
+/home/peter/Desktop/Fisa_backend/EventMedia/__init__.py changed, reloading.
+Performing system checks...
+
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 720, in url_patterns
+    iter(patterns)
+TypeError: 'module' object is not iterable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/commands/runserver.py", line 134, in inner_run
+    self.check(**check_kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/base.py", line 492, in check
+    all_issues = checks.run_checks(
+                 ^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/registry.py", line 89, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 16, in check_url_config
+    return check_resolver(resolver)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+           ^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 532, in check
+    messages.extend(check_resolver(pattern))
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+           ^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 531, in check
+    for pattern in self.url_patterns:
+                   ^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 728, in url_patterns
+    raise ImproperlyConfigured(msg.format(name=self.urlconf_name)) from e
+django.core.exceptions.ImproperlyConfigured: The included URLconf '<module 'NonMembers.urls' from '/home/peter/Desktop/Fisa_backend/NonMembers/urls.py'>' does not appear to have any patterns in it. If you see the 'urlpatterns' variable with valid patterns in the file then the issue is probably caused by a circular import.
+/home/peter/Desktop/Fisa_backend/EventMedia/admin.py changed, reloading.
+Performing system checks...
+
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 720, in url_patterns
+    iter(patterns)
+TypeError: 'module' object is not iterable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/commands/runserver.py", line 134, in inner_run
+    self.check(**check_kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/base.py", line 492, in check
+    all_issues = checks.run_checks(
+                 ^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/registry.py", line 89, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 16, in check_url_config
+    return check_resolver(resolver)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+           ^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 532, in check
+    messages.extend(check_resolver(pattern))
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+           ^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 531, in check
+    for pattern in self.url_patterns:
+                   ^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 728, in url_patterns
+    raise ImproperlyConfigured(msg.format(name=self.urlconf_name)) from e
+django.core.exceptions.ImproperlyConfigured: The included URLconf '<module 'NonMembers.urls' from '/home/peter/Desktop/Fisa_backend/NonMembers/urls.py'>' does not appear to have any patterns in it. If you see the 'urlpatterns' variable with valid patterns in the file then the issue is probably caused by a circular import.
+/home/peter/Desktop/Fisa_backend/EventMedia/models.py changed, reloading.
+Performing system checks...
+
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 720, in url_patterns
+    iter(patterns)
+TypeError: 'module' object is not iterable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/commands/runserver.py", line 134, in inner_run
+    self.check(**check_kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/base.py", line 492, in check
+    all_issues = checks.run_checks(
+                 ^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/registry.py", line 89, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 16, in check_url_config
+    return check_resolver(resolver)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+           ^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 532, in check
+    messages.extend(check_resolver(pattern))
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+           ^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 531, in check
+    for pattern in self.url_patterns:
+                   ^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 728, in url_patterns
+    raise ImproperlyConfigured(msg.format(name=self.urlconf_name)) from e
+django.core.exceptions.ImproperlyConfigured: The included URLconf '<module 'NonMembers.urls' from '/home/peter/Desktop/Fisa_backend/NonMembers/urls.py'>' does not appear to have any patterns in it. If you see the 'urlpatterns' variable with valid patterns in the file then the issue is probably caused by a circular import.
+/home/peter/Desktop/Fisa_backend/EventMedia/urls.py changed, reloading.
+Performing system checks...
+
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 720, in url_patterns
+    iter(patterns)
+TypeError: 'module' object is not iterable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/commands/runserver.py", line 134, in inner_run
+    self.check(**check_kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/base.py", line 492, in check
+    all_issues = checks.run_checks(
+                 ^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/registry.py", line 89, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 16, in check_url_config
+    return check_resolver(resolver)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+           ^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 532, in check
+    messages.extend(check_resolver(pattern))
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+           ^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 531, in check
+    for pattern in self.url_patterns:
+                   ^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 728, in url_patterns
+    raise ImproperlyConfigured(msg.format(name=self.urlconf_name)) from e
+django.core.exceptions.ImproperlyConfigured: The included URLconf '<module 'NonMembers.urls' from '/home/peter/Desktop/Fisa_backend/NonMembers/urls.py'>' does not appear to have any patterns in it. If you see the 'urlpatterns' variable with valid patterns in the file then the issue is probably caused by a circular import.
+/home/peter/Desktop/Fisa_backend/Events/__init__.py changed, reloading.
+Performing system checks...
+
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 720, in url_patterns
+    iter(patterns)
+TypeError: 'module' object is not iterable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/commands/runserver.py", line 134, in inner_run
+    self.check(**check_kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/base.py", line 492, in check
+    all_issues = checks.run_checks(
+                 ^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/registry.py", line 89, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 16, in check_url_config
+    return check_resolver(resolver)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+           ^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 532, in check
+    messages.extend(check_resolver(pattern))
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+           ^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 531, in check
+    for pattern in self.url_patterns:
+                   ^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 728, in url_patterns
+    raise ImproperlyConfigured(msg.format(name=self.urlconf_name)) from e
+django.core.exceptions.ImproperlyConfigured: The included URLconf '<module 'NonMembers.urls' from '/home/peter/Desktop/Fisa_backend/NonMembers/urls.py'>' does not appear to have any patterns in it. If you see the 'urlpatterns' variable with valid patterns in the file then the issue is probably caused by a circular import.
+/home/peter/Desktop/Fisa_backend/Events/apps.py changed, reloading.
+Performing system checks...
+
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 720, in url_patterns
+    iter(patterns)
+TypeError: 'module' object is not iterable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/commands/runserver.py", line 134, in inner_run
+    self.check(**check_kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/base.py", line 492, in check
+    all_issues = checks.run_checks(
+                 ^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/registry.py", line 89, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 16, in check_url_config
+    return check_resolver(resolver)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+           ^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 532, in check
+    messages.extend(check_resolver(pattern))
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+           ^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 531, in check
+    for pattern in self.url_patterns:
+                   ^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 728, in url_patterns
+    raise ImproperlyConfigured(msg.format(name=self.urlconf_name)) from e
+django.core.exceptions.ImproperlyConfigured: The included URLconf '<module 'NonMembers.urls' from '/home/peter/Desktop/Fisa_backend/NonMembers/urls.py'>' does not appear to have any patterns in it. If you see the 'urlpatterns' variable with valid patterns in the file then the issue is probably caused by a circular import.
+/home/peter/Desktop/Fisa_backend/Events/urls.py changed, reloading.
+Performing system checks...
+
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 720, in url_patterns
+    iter(patterns)
+TypeError: 'module' object is not iterable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/commands/runserver.py", line 134, in inner_run
+    self.check(**check_kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/base.py", line 492, in check
+    all_issues = checks.run_checks(
+                 ^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/registry.py", line 89, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 16, in check_url_config
+    return check_resolver(resolver)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+           ^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 532, in check
+    messages.extend(check_resolver(pattern))
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+           ^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 531, in check
+    for pattern in self.url_patterns:
+                   ^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 728, in url_patterns
+    raise ImproperlyConfigured(msg.format(name=self.urlconf_name)) from e
+django.core.exceptions.ImproperlyConfigured: The included URLconf '<module 'NonMembers.urls' from '/home/peter/Desktop/Fisa_backend/NonMembers/urls.py'>' does not appear to have any patterns in it. If you see the 'urlpatterns' variable with valid patterns in the file then the issue is probably caused by a circular import.
+/home/peter/Desktop/Fisa_backend/Fisa_backend/__init__.py changed, reloading.
+Performing system checks...
+
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 720, in url_patterns
+    iter(patterns)
+TypeError: 'module' object is not iterable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/commands/runserver.py", line 134, in inner_run
+    self.check(**check_kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/base.py", line 492, in check
+    all_issues = checks.run_checks(
+                 ^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/registry.py", line 89, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 16, in check_url_config
+    return check_resolver(resolver)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+           ^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 532, in check
+    messages.extend(check_resolver(pattern))
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+           ^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 531, in check
+    for pattern in self.url_patterns:
+                   ^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 728, in url_patterns
+    raise ImproperlyConfigured(msg.format(name=self.urlconf_name)) from e
+django.core.exceptions.ImproperlyConfigured: The included URLconf '<module 'NonMembers.urls' from '/home/peter/Desktop/Fisa_backend/NonMembers/urls.py'>' does not appear to have any patterns in it. If you see the 'urlpatterns' variable with valid patterns in the file then the issue is probably caused by a circular import.
+/home/peter/Desktop/Fisa_backend/Fisa_backend/settings.py changed, reloading.
+Performing system checks...
+
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 720, in url_patterns
+    iter(patterns)
+TypeError: 'module' object is not iterable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/commands/runserver.py", line 134, in inner_run
+    self.check(**check_kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/base.py", line 492, in check
+    all_issues = checks.run_checks(
+                 ^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/registry.py", line 89, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 16, in check_url_config
+    return check_resolver(resolver)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+           ^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 532, in check
+    messages.extend(check_resolver(pattern))
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+           ^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 531, in check
+    for pattern in self.url_patterns:
+                   ^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 728, in url_patterns
+    raise ImproperlyConfigured(msg.format(name=self.urlconf_name)) from e
+django.core.exceptions.ImproperlyConfigured: The included URLconf '<module 'NonMembers.urls' from '/home/peter/Desktop/Fisa_backend/NonMembers/urls.py'>' does not appear to have any patterns in it. If you see the 'urlpatterns' variable with valid patterns in the file then the issue is probably caused by a circular import.
+/home/peter/Desktop/Fisa_backend/NonMembers/__init__.py changed, reloading.
+Performing system checks...
+
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 720, in url_patterns
+    iter(patterns)
+TypeError: 'module' object is not iterable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/commands/runserver.py", line 134, in inner_run
+    self.check(**check_kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/base.py", line 492, in check
+    all_issues = checks.run_checks(
+                 ^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/registry.py", line 89, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 16, in check_url_config
+    return check_resolver(resolver)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+           ^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 532, in check
+    messages.extend(check_resolver(pattern))
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+           ^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 531, in check
+    for pattern in self.url_patterns:
+                   ^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 728, in url_patterns
+    raise ImproperlyConfigured(msg.format(name=self.urlconf_name)) from e
+django.core.exceptions.ImproperlyConfigured: The included URLconf '<module 'NonMembers.urls' from '/home/peter/Desktop/Fisa_backend/NonMembers/urls.py'>' does not appear to have any patterns in it. If you see the 'urlpatterns' variable with valid patterns in the file then the issue is probably caused by a circular import.
+/home/peter/Desktop/Fisa_backend/NonMembers/apps.py changed, reloading.
+Performing system checks...
+
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 720, in url_patterns
+    iter(patterns)
+TypeError: 'module' object is not iterable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/commands/runserver.py", line 134, in inner_run
+    self.check(**check_kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/base.py", line 492, in check
+    all_issues = checks.run_checks(
+                 ^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/registry.py", line 89, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 16, in check_url_config
+    return check_resolver(resolver)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+           ^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 532, in check
+    messages.extend(check_resolver(pattern))
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+           ^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 531, in check
+    for pattern in self.url_patterns:
+                   ^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 728, in url_patterns
+    raise ImproperlyConfigured(msg.format(name=self.urlconf_name)) from e
+django.core.exceptions.ImproperlyConfigured: The included URLconf '<module 'NonMembers.urls' from '/home/peter/Desktop/Fisa_backend/NonMembers/urls.py'>' does not appear to have any patterns in it. If you see the 'urlpatterns' variable with valid patterns in the file then the issue is probably caused by a circular import.
+/home/peter/Desktop/Fisa_backend/NonMembers/models.py changed, reloading.
+Performing system checks...
+
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 720, in url_patterns
+    iter(patterns)
+TypeError: 'module' object is not iterable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/commands/runserver.py", line 134, in inner_run
+    self.check(**check_kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/base.py", line 492, in check
+    all_issues = checks.run_checks(
+                 ^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/registry.py", line 89, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 16, in check_url_config
+    return check_resolver(resolver)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+           ^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 532, in check
+    messages.extend(check_resolver(pattern))
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+           ^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 531, in check
+    for pattern in self.url_patterns:
+                   ^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 728, in url_patterns
+    raise ImproperlyConfigured(msg.format(name=self.urlconf_name)) from e
+django.core.exceptions.ImproperlyConfigured: The included URLconf '<module 'NonMembers.urls' from '/home/peter/Desktop/Fisa_backend/NonMembers/urls.py'>' does not appear to have any patterns in it. If you see the 'urlpatterns' variable with valid patterns in the file then the issue is probably caused by a circular import.
+/home/peter/Desktop/Fisa_backend/NonMembers/urls.py changed, reloading.
+Performing system checks...
+
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/commands/runserver.py", line 134, in inner_run
+    self.check(**check_kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/base.py", line 492, in check
+    all_issues = checks.run_checks(
+                 ^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/registry.py", line 89, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 136, in check_custom_error_handlers
+    handler = resolver.resolve_error_handler(status_code)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 732, in resolve_error_handler
+    callback = getattr(self.urlconf_module, "handler%s" % view_type, None)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 711, in urlconf_module
+    return import_module(self.urlconf_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/peter/Desktop/Fisa_backend/Fisa_backend/urls.py", line 27, in <module>
+    path('nonmembers/', include('NonMembers.urls')),
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/peter/Desktop/Fisa_backend/NonMembers/urls.py", line 5, in <module>
+    path("nonmembers/", views.nonmembers_view, name="nonmembers"),
+                        ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'NonMembers.views' has no attribute 'nonmembers_view'
+/home/peter/Desktop/Fisa_backend/NonMembers/views.py changed, reloading.
+Performing system checks...
+
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 720, in url_patterns
+    iter(patterns)
+TypeError: 'module' object is not iterable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/commands/runserver.py", line 134, in inner_run
+    self.check(**check_kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/base.py", line 492, in check
+    all_issues = checks.run_checks(
+                 ^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/registry.py", line 89, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 16, in check_url_config
+    return check_resolver(resolver)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+           ^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 532, in check
+    messages.extend(check_resolver(pattern))
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+           ^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 531, in check
+    for pattern in self.url_patterns:
+                   ^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 728, in url_patterns
+    raise ImproperlyConfigured(msg.format(name=self.urlconf_name)) from e
+django.core.exceptions.ImproperlyConfigured: The included URLconf '<module 'Student.urls' from '/home/peter/Desktop/Fisa_backend/Student/urls.py'>' does not appear to have any patterns in it. If you see the 'urlpatterns' variable with valid patterns in the file then the issue is probably caused by a circular import.
+/home/peter/Desktop/Fisa_backend/Student/__init__.py changed, reloading.
+Performing system checks...
+
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 720, in url_patterns
+    iter(patterns)
+TypeError: 'module' object is not iterable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/commands/runserver.py", line 134, in inner_run
+    self.check(**check_kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/base.py", line 492, in check
+    all_issues = checks.run_checks(
+                 ^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/registry.py", line 89, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 16, in check_url_config
+    return check_resolver(resolver)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+           ^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 532, in check
+    messages.extend(check_resolver(pattern))
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+           ^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 531, in check
+    for pattern in self.url_patterns:
+                   ^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 728, in url_patterns
+    raise ImproperlyConfigured(msg.format(name=self.urlconf_name)) from e
+django.core.exceptions.ImproperlyConfigured: The included URLconf '<module 'Student.urls' from '/home/peter/Desktop/Fisa_backend/Student/urls.py'>' does not appear to have any patterns in it. If you see the 'urlpatterns' variable with valid patterns in the file then the issue is probably caused by a circular import.
+/home/peter/Desktop/Fisa_backend/Student/apps.py changed, reloading.
+Performing system checks...
+
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 720, in url_patterns
+    iter(patterns)
+TypeError: 'module' object is not iterable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/commands/runserver.py", line 134, in inner_run
+    self.check(**check_kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/base.py", line 492, in check
+    all_issues = checks.run_checks(
+                 ^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/registry.py", line 89, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 16, in check_url_config
+    return check_resolver(resolver)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+           ^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 532, in check
+    messages.extend(check_resolver(pattern))
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+           ^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 531, in check
+    for pattern in self.url_patterns:
+                   ^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 728, in url_patterns
+    raise ImproperlyConfigured(msg.format(name=self.urlconf_name)) from e
+django.core.exceptions.ImproperlyConfigured: The included URLconf '<module 'Student.urls' from '/home/peter/Desktop/Fisa_backend/Student/urls.py'>' does not appear to have any patterns in it. If you see the 'urlpatterns' variable with valid patterns in the file then the issue is probably caused by a circular import.
+/home/peter/Desktop/Fisa_backend/Student/models.py changed, reloading.
+Performing system checks...
+
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 720, in url_patterns
+    iter(patterns)
+TypeError: 'module' object is not iterable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/commands/runserver.py", line 134, in inner_run
+    self.check(**check_kwargs)
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/management/base.py", line 492, in check
+    all_issues = checks.run_checks(
+                 ^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/registry.py", line 89, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 16, in check_url_config
+    return check_resolver(resolver)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+           ^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 532, in check
+    messages.extend(check_resolver(pattern))
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+           ^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 531, in check
+    for pattern in self.url_patterns:
+                   ^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/peter/snap/code/209/.local/share/virtualenvs/Fisa_backend-1-IQLkqB/lib/python3.12/site-packages/django/urls/resolvers.py", line 728, in url_patterns
+    raise ImproperlyConfigured(msg.format(name=self.urlconf_name)) from e
+django.core.exceptions.ImproperlyConfigured: The included URLconf '<module 'Student.urls' from '/home/peter/Desktop/Fisa_backend/Student/urls.py'>' does not appear to have any patterns in it. If you see the 'urlpatterns' variable with valid patterns in the file then the issue is probably caused by a circular import.
+/home/peter/Desktop/Fisa_backend/Student/urls.py changed, reloading.
+Performing system checks...
+
+Watching for file changes with StatReloader
+/home/peter/Desktop/Fisa_backend/Student/admin.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+October 05, 2025 - 01:38:40
+Django version 5.2.7, using settings 'Fisa_backend.settings'
+Starting development server at http://127.0.0.1:8001/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/5.2/howto/deployment/
+Watching for file changes with StatReloader
+/home/peter/Desktop/Fisa_backend/Student/models.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+October 05, 2025 - 01:38:51
+Django version 5.2.7, using settings 'Fisa_backend.settings'
+Starting development server at http://127.0.0.1:8001/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/5.2/howto/deployment/
+Watching for file changes with StatReloader
+/home/peter/Desktop/Fisa_backend/Student/urls.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+October 05, 2025 - 01:38:53
+Django version 5.2.7, using settings 'Fisa_backend.settings'
+Starting development server at http://127.0.0.1:8001/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/5.2/howto/deployment/
+Watching for file changes with StatReloader
+/home/peter/Desktop/Fisa_backend/Student/urls.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+October 05, 2025 - 01:38:55
+Django version 5.2.7, using settings 'Fisa_backend.settings'
+Starting development server at http://127.0.0.1:8001/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/5.2/howto/deployment/
+Watching for file changes with StatReloader
+/home/peter/Desktop/Fisa_backend/Student/urls.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+October 05, 2025 - 01:41:37
+Django version 5.2.7, using settings 'Fisa_backend.settings'
+Starting development server at http://127.0.0.1:8001/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/5.2/howto/deployment/
+Watching for file changes with StatReloader
+/home/peter/Desktop/Fisa_backend/Attendees/urls.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+October 05, 2025 - 01:41:41
+Django version 5.2.7, using settings 'Fisa_backend.settings'
+Starting development server at http://127.0.0.1:8001/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/5.2/howto/deployment/
+Watching for file changes with StatReloader
+/home/peter/Desktop/Fisa_backend/Events/urls.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+October 05, 2025 - 01:42:01
+Django version 5.2.7, using settings 'Fisa_backend.settings'
+Starting development server at http://127.0.0.1:8001/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/5.2/howto/deployment/
+Watching for file changes with StatReloader
+/home/peter/Desktop/Fisa_backend/NonMembers/urls.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+October 05, 2025 - 01:42:25
+Django version 5.2.7, using settings 'Fisa_backend.settings'
+Starting development server at http://127.0.0.1:8001/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/5.2/howto/deployment/
+Watching for file changes with StatReloader
+/home/peter/Desktop/Fisa_backend/CouncilMembers/urls.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+October 05, 2025 - 01:42:40
+Django version 5.2.7, using settings 'Fisa_backend.settings'
+Starting development server at http://127.0.0.1:8001/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/5.2/howto/deployment/
+Watching for file changes with StatReloader
+/home/peter/Desktop/Fisa_backend/Student/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+October 05, 2025 - 01:42:59
+Django version 5.2.7, using settings 'Fisa_backend.settings'
+Starting development server at http://127.0.0.1:8001/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/5.2/howto/deployment/
+Watching for file changes with StatReloader
+/home/peter/Desktop/Fisa_backend/Student/urls.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+October 05, 2025 - 01:50:23
+Django version 5.2.7, using settings 'Fisa_backend.settings'
+Starting development server at http://127.0.0.1:8001/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/5.2/howto/deployment/
+Watching for file changes with StatReloader
+/home/peter/Desktop/Fisa_backend/Admissions/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+October 05, 2025 - 01:50:43
+Django version 5.2.7, using settings 'Fisa_backend.settings'
+Starting development server at http://127.0.0.1:8001/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/5.2/howto/deployment/
+Watching for file changes with StatReloader
+/home/peter/Desktop/Fisa_backend/Admissions/urls.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+October 05, 2025 - 01:53:52
+Django version 5.2.7, using settings 'Fisa_backend.settings'
+Starting development server at http://127.0.0.1:8001/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/5.2/howto/deployment/
+Watching for file changes with StatReloader
+/home/peter/Desktop/Fisa_backend/CouncilMembers/migrations/0001_initial.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+October 05, 2025 - 01:54:03
+Django version 5.2.7, using settings 'Fisa_backend.settings'
+Starting development server at http://127.0.0.1:8001/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/5.2/howto/deployment/
+Watching for file changes with StatReloader
+/home/peter/Desktop/Fisa_backend/Student/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 25 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): Admissions, Attendees, CouncilMembers, EventMedia, Events, NonMembers, Student, admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+October 05, 2025 - 01:57:39
+Django version 5.2.7, using settings 'Fisa_backend.settings'
+Starting development server at http://127.0.0.1:8001/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/5.2/howto/deployment/
+Watching for file changes with StatReloader

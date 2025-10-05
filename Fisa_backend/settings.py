@@ -20,7 +20,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = (os.getenv('SECRECT_DJANGO_KEY'))
+# settings.py
+SECRET_KEY = os.getenv('SECRET_DJANGO_KEY', 'dev-secret-for-local')
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -39,10 +41,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Admissions',
     'Attendees',
-    'CouncilMemebers',
+    'CouncilMembers',
     'EventMedia',
     'Events',
-    'NonMemebers',
+    'NonMembers',
     'Student',
     'rest_framework',
 ]
@@ -59,13 +61,15 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'Fisa_backend.urls'
 
+# Fisa_backend/settings.py
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
-        'APP_DIRS': True,
+        'DIRS': [],  # optional: add global template dirs here
+        'APP_DIRS': True,  # this allows Django to find templates inside app folders
         'OPTIONS': {
             'context_processors': [
+                'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
@@ -73,6 +77,7 @@ TEMPLATES = [
         },
     },
 ]
+
 
 WSGI_APPLICATION = 'Fisa_backend.wsgi.application'
 
@@ -123,6 +128,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
+
+# Media (uploaded files)
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'uploads'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
