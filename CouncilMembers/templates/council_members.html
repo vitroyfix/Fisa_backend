@@ -1,18 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Council Members</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+    </style>
 </head>
 <body>
     <h1>Council Members</h1>
+
     {% if council_members %}
-        <ul>
-        {% for member in council_members %}
-            <li>{{ member.name }} - {{ member.position }}</li>
-        {% endfor %}
-        </ul>
+        <table>
+            <thead>
+                <tr>
+                    <th>Student</th>
+                    <th>Role / Position</th>
+                    <th>Committee</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for member in council_members %}
+                <tr>
+                    <td>{{ member.student.admissions.first_name }} {{ member.student.admissions.last_name }}</td>
+                    <td>{{ member.role_position }}</td>
+                    <td>{{ member.committee }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
     {% else %}
-        <p>No council members found.</p>
+        <p style="text-align: center;">No council members found.</p>
     {% endif %}
 </body>
 </html>

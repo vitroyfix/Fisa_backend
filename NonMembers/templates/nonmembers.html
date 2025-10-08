@@ -6,7 +6,7 @@
     <style>
         body { font-family: Arial, sans-serif; margin: 20px; }
         table {
-            width: 80%;
+            width: 90%;
             border-collapse: collapse;
             margin: 20px auto;
         }
@@ -19,6 +19,7 @@
             background-color: #f4f4f4;
         }
         h1 { text-align: center; }
+        ul { padding-left: 20px; margin: 0; }
     </style>
 </head>
 <body>
@@ -30,6 +31,10 @@
                 <th>Last Name</th>
                 <th>Institution</th>
                 <th>Events</th>
+                <th>Status</th>
+                <th>Registration Date</th>
+                <th>Attended Date</th>
+                <th>Certificate Issued</th>
             </tr>
         </thead>
         <tbody>
@@ -42,17 +47,21 @@
                     {% if nonmember.events.all %}
                         <ul>
                         {% for event in nonmember.events.all %}
-                            <li>{{ event }}</li>
+                            <li>{{ event.title }}</li>
                         {% endfor %}
                         </ul>
                     {% else %}
                         None
                     {% endif %}
                 </td>
+                <td>{{ nonmember.status }}</td>
+                <td>{{ nonmember.registration_date|date:"Y-m-d H:i" }}</td>
+                <td>{{ nonmember.attended_date|default:"-"|date:"Y-m-d H:i" }}</td>
+                <td>{{ nonmember.certificate_issued|yesno:"Yes,No" }}</td>
             </tr>
             {% empty %}
             <tr>
-                <td colspan="4" style="text-align:center;">No non-members found.</td>
+                <td colspan="8" style="text-align:center;">No non-members found.</td>
             </tr>
             {% endfor %}
         </tbody>

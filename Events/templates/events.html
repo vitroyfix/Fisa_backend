@@ -1,77 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Events List</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 20px; }
-        table {
-            width: 90%;
-            border-collapse: collapse;
-            margin: 20px auto;
-        }
-        th, td {
-            padding: 10px;
-            border: 1px solid #ccc;
-            text-align: left;
-            vertical-align: top;
-        }
-        th {
-            background-color: #f4f4f4;
-        }
-        h1 { text-align: center; }
-        ul { margin: 0; padding-left: 20px; }
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      table {
+        width: 95%;
+        border-collapse: collapse;
+        margin: 20px auto;
+      }
+      th,
+      td {
+        padding: 10px;
+        border: 1px solid #ccc;
+        text-align: left;
+        vertical-align: top;
+      }
+      th {
+        background-color: #f4f4f4;
+      }
+      h1 {
+        text-align: center;
+      }
+      ul {
+        margin: 0;
+        padding-left: 20px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Events</h1>
     <table>
-        <thead>
-            <tr>
-                <th>Title</th>
-                <th>Description</th>
-                <th>Location</th>
-                <th>Time</th>
-                <th>Speakers</th>
-                <th>Partners</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for event in events %}
-            <tr>
-                <td>{{ event.title }}</td>
-                <td>{{ event.description }}</td>
-                <td>{{ event.location }}</td>
-                <td>{{ event.time }}</td>
-                <td>
-                    {% if event.speakers %}
-                        <ul>
-                        {% for speaker in event.speakers %}
-                            <li>{{ speaker }}</li>
-                        {% endfor %}
-                        </ul>
-                    {% else %}
-                        None
-                    {% endif %}
-                </td>
-                <td>
-                    {% if event.partners %}
-                        <ul>
-                        {% for partner in event.partners %}
-                            <li>{{ partner }}</li>
-                        {% endfor %}
-                        </ul>
-                    {% else %}
-                        None
-                    {% endif %}
-                </td>
-            </tr>
-            {% empty %}
-            <tr>
-                <td colspan="6" style="text-align:center;">No events found.</td>
-            </tr>
-            {% endfor %}
-        </tbody>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Location</th>
+          <th>Time</th>
+          <th>Speakers</th>
+          <th>Partners</th>
+          <th>Council Members</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for event in events %}
+        <tr>
+          <td>{{ event.title }}</td>
+          <td>{{ event.description }}</td>
+          <td>{{ event.location }}</td>
+          <td>{{ event.time|date:"Y-m-d H:i" }}</td>
+
+          <!-- Speakers -->
+          <td>
+            {% if event.speakers %}
+            <ul>
+              {% for speaker in event.speakers %}
+              <li>{{ speaker }}</li>
+              {% endfor %}
+            </ul>
+            {% else %} None {% endif %}
+          </td>
+
+          <!-- Partners -->
+          <td>
+            {% if event.partners %}
+            <ul>
+              {% for partner in event.partners %}
+              <li>{{ partner }}</li>
+              {% endfor %}
+            </ul>
+            {% else %} None {% endif %}
+          </td>
+
+          <!-- Council Members -->
+          <td>
+            {% if event.council_participations.exists %}
+            <ul>
+              {% for participation in event.council_participations.all %}
+              <li>
+                <p>{{ participation.council_member.student }}</p>
+                <p>Role in Event: {{ participation.role_in_event }}</p>
+
+                <p>Attended: {{ participation.attended|yesno:"Yes,No" }}</p>
+              </li>
+
+              {% endfor %}
+            </ul>
+            {% else %} No council members assigned {% endif %}
+          </td>
+        </tr>
+        {% empty %}
+        <tr>
+          <td colspan="7" style="text-align: center">No events found.</td>
+        </tr>
+        {% endfor %}
+      </tbody>
     </table>
-</body>
+  </body>
 </html>
