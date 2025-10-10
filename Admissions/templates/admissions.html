@@ -5,61 +5,121 @@
     <title>Admissions List</title>
     <style>
       body {
-        font-family: Arial, sans-serif;
-        margin: 20px;
-        background-color: #fafafa;
-      }
-      table {
-        width: 95%;
-        border-collapse: collapse;
-        margin: 20px auto;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      }
-      th,
-      td {
-        padding: 12px;
-        border: 1px solid #ddd;
-        text-align: left;
-        vertical-align: top;
-      }
-      th {
+        font-family: "Segoe UI", Arial, sans-serif;
+        margin: 0;
+        padding: 0;
         background-color: #f8f9fa;
-        font-weight: bold;
-      }
-      tr:nth-child(even) {
-        background-color: #fdfdfd;
-      }
-      h1 {
-        text-align: center;
-        margin-bottom: 20px;
         color: #333;
       }
+
+      h1 {
+        text-align: center;
+        margin-top: 40px;
+        font-size: 28px;
+        color: #222;
+      }
+
+      table {
+        width: 90%;
+        margin: 30px auto;
+        border-collapse: separate;
+        border-spacing: 0;
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      }
+
+      thead {
+        background-color: #56c42bff;
+      }
+
+      th {
+        padding: 14px 12px;
+        text-align: left;
+        font-weight: 600;
+        color: #ffffffff;
+        border-bottom: 2px solid #dee2e6;
+        font-size: 15px;
+      }
+
+      td {
+        padding: 12px 10px;
+        border-bottom: 1px solid #eee;
+        vertical-align: middle;
+        font-size: 14px;
+        color: #817f7fff;
+      }
+
+      tr:hover {
+        background-color: rgba(106, 212, 73, 0.2);
+        transition: background-color 0.2s ease-in-out;
+      }
+
       .status {
-        font-weight: bold;
+        font-weight: 600;
+        padding: 6px 10px;
+        border-radius: 20px;
         text-transform: capitalize;
+        display: inline-block;
+        font-size: 13px;
+        text-align: center;
       }
+
       .status.pending {
-        color: orange;
+        background-color: #fff4e5;
+        color: #b26a00;
       }
+
       .status.approved {
-        color: green;
+        background-color: #e6f4ea;
+        color: #2e7d32;
       }
+
       .status.rejected {
-        color: red;
+        background-color: #fdecea;
+        color: #c62828;
+      }
+
+      .no-data {
+        text-align: center;
+        color: #777;
+        font-style: italic;
+        margin-top: 40px;
+        font-size: 16px;
+      }
+
+      @media (max-width: 768px) {
+        table {
+          width: 100%;
+          font-size: 13px;
+        }
+
+        th,
+        td {
+          padding: 10px 8px;
+        }
+
+        h1 {
+          font-size: 24px;
+        }
       }
     </style>
   </head>
+
   <body>
-    <h1>Admissions</h1>
+    <h1>Admissions List</h1>
+
+    {% if admissions %}
     <table>
       <thead>
         <tr>
+          <th>Full Name</th>
           <th>Reg Number</th>
-          <th>Name</th>
           <th>Email</th>
-          <th>Phone Number</th>
+          <th>Phone</th>
           <th>Course</th>
-          <th>Year of Study</th>
+          <th>Year</th>
           <th>Admission Date</th>
           <th>Status</th>
           <th>Comments</th>
@@ -68,28 +128,34 @@
       <tbody>
         {% for admission in admissions %}
         <tr>
-          <td>{{ admission.reg_number }}</td>
           <td>
-            {{ admission.first_name }} {{ admission.middle_name }} {{
-            admission.last_name }}
+            {{ admission.first_name }}{% if admission.middle_name %}
+            <span>{{ admission.middle_name }}</span>{% endif %}
+            <p style="display: inline; margin: 0">{{ admission.last_name }}</p>
           </td>
+          <td>{{ admission.reg_number }}</td>
           <td>{{ admission.email }}</td>
           <td>{{ admission.phone_number }}</td>
           <td>{{ admission.course }}</td>
           <td>
-            {% if admission.year_of_study %} Year {{ admission.year_of_study }}
-            {% else %} N/A {% endif %}
+            {% if admission.year_of_study %} Year
+            <span>{{ admission.year_of_study }}</span>
+            {% else %} N/A{% endif %}
           </td>
-          <td>{{ admission.admission_date|date:"Y-m-d" }}</td>
-          <td class="status {{ admission.status }}">{{ admission.status }}</td>
+          <td>{{ admission.admission_date}}</td>
+          <td>
+            <span class="status {{ admission.status }}"
+              >{{ admission.status }}</span
+            >
+          </td>
           <td>{{ admission.comments|default:"-" }}</td>
         </tr>
-        {% empty %}
-        <tr>
-          <td colspan="9" style="text-align: center">No admissions found.</td>
-        </tr>
+
         {% endfor %}
       </tbody>
     </table>
+    {% else %}
+    <p class="no-data">No admissions found.</p>
+    {% endif %}
   </body>
 </html>

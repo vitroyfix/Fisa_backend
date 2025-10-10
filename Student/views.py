@@ -1,17 +1,17 @@
-from django.shortcuts import render
+from rest_framework import viewsets, renderers
+from rest_framework.response import Response
 from .models import Student
-from Attendees.models import Attend  # model linking student to events
+from .serializers import StudentSerializer
 
-def students_view(request):
-    students = Student.objects.all()
-    
-    # Prepare a dictionary of student -> events
-    student_events = {}
-    for student in students:
-        attends = Attend.objects.filter(student=student)
-        student_events[student.id] = [attend.event for attend in attends]
-    
-    return render(request, "students.html", {
-        "students": students,
-        "student_events": student_events
-    })
+class StudentViewSet(viewsets.ModelViewSet):
+    queryset = Student.objects.all().select_related('admissions')
+    serializer_class = StudentSerializer
+    renderer_classes = [renderers.JSONRenderer, renderers.TemplateHTMLRenderer]
+    template_name = "students.html"
+
+    def list(self, request, *args, **kwargs):
+        response = super().list(request, *args, **kwargs)
+        if request.accepted_renderer.format == 'html':
+        
+            return Response({'students': self.get_queryset()})
+        return response

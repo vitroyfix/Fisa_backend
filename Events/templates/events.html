@@ -5,35 +5,101 @@
     <title>Events List</title>
     <style>
       body {
-        font-family: Arial, sans-serif;
-        margin: 20px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f8f9fa;
+        color: #333;
       }
-      table {
-        width: 95%;
-        border-collapse: collapse;
-        margin: 20px auto;
-      }
-      th,
-      td {
-        padding: 10px;
-        border: 1px solid #ccc;
-        text-align: left;
-        vertical-align: top;
-      }
-      th {
-        background-color: #f4f4f4;
-      }
+
       h1 {
         text-align: center;
+        margin-top: 40px;
+        font-size: 28px;
+        color: #222;
       }
+
+      table {
+        width: 95%;
+        margin: 30px auto;
+        border-collapse: separate;
+        border-spacing: 0;
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      }
+
+      thead {
+        background-color: #56c42bff;
+        color: #fff;
+      }
+
+      th {
+        padding: 14px 12px;
+        text-align: left;
+        font-weight: 600;
+        font-size: 15px;
+      }
+
+      td {
+        padding: 12px 10px;
+        border-bottom: 1px solid #eee;
+        vertical-align: top;
+        font-size: 14px;
+        color: #555;
+      }
+
+      tr:hover {
+        background-color: rgba(106, 212, 73, 0.2);
+        transition: background-color 0.2s ease-in-out;
+      }
+
       ul {
         margin: 0;
-        padding-left: 20px;
+        padding-left: 18px;
+      }
+
+      li {
+        margin-bottom: 4px;
+      }
+
+      p {
+        margin: 2px 0;
+        font-size: 14px;
+        color: #555;
+      }
+
+      .no-data {
+        text-align: center;
+        color: #777;
+        font-style: italic;
+        margin-top: 40px;
+        font-size: 16px;
+      }
+
+      @media (max-width: 768px) {
+        table {
+          width: 100%;
+          font-size: 13px;
+        }
+
+        th,
+        td {
+          padding: 10px 8px;
+        }
+
+        h1 {
+          font-size: 24px;
+        }
       }
     </style>
   </head>
+
   <body>
-    <h1>Events</h1>
+    <h1>Events List</h1>
+
+    {% if events %}
     <table>
       <thead>
         <tr>
@@ -43,7 +109,6 @@
           <th>Time</th>
           <th>Speakers</th>
           <th>Partners</th>
-          <th>Council Members</th>
         </tr>
       </thead>
       <tbody>
@@ -75,23 +140,6 @@
             </ul>
             {% else %} None {% endif %}
           </td>
-
-          <!-- Council Members -->
-          <td>
-            {% if event.council_participations.exists %}
-            <ul>
-              {% for participation in event.council_participations.all %}
-              <li>
-                <p>{{ participation.council_member.student }}</p>
-                <p>Role in Event: {{ participation.role_in_event }}</p>
-
-                <p>Attended: {{ participation.attended|yesno:"Yes,No" }}</p>
-              </li>
-
-              {% endfor %}
-            </ul>
-            {% else %} No council members assigned {% endif %}
-          </td>
         </tr>
         {% empty %}
         <tr>
@@ -100,5 +148,8 @@
         {% endfor %}
       </tbody>
     </table>
+    {% else %}
+    <p class="no-data">No events found.</p>
+    {% endif %}
   </body>
 </html>

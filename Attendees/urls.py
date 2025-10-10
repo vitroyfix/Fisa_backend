@@ -1,6 +1,10 @@
-from django.urls import path
-from . import views
+from django.urls import path, include
+from rest_framework.routers import DefaultRouter
+from .views import AttendViewSet
+
+router = DefaultRouter()
+router.register(r'attendances', AttendViewSet)
 
 urlpatterns = [
-    path('', views.attendances_view, name='attendees'),
+    path('', include(router.urls)),
 ]

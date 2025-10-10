@@ -1,70 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Non-Members List</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 20px; }
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background-color: #f8f9fa;
+        color: #333;
+      }
+
+      h1 {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 28px;
+        color: #222;
+      }
+
+      table {
+        width: 90%;
+        margin: 30px auto;
+        border-collapse: collapse;
+        background-color: white;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      th,
+      td {
+        padding: 12px;
+        border-bottom: 1px solid #ddd;
+        text-align: left;
+      }
+
+      th {
+        background-color: #4caf50;
+        color: white;
+        font-weight: bold;
+      }
+
+      tr:hover {
+        background-color: rgba(106, 212, 73, 0.2);
+        transition: background-color 0.2s ease-in-out;
+      }
+
+      ul {
+        margin: 0;
+        padding-left: 20px;
+      }
+
+      li {
+        margin-bottom: 4px;
+      }
+
+      .no-data {
+        text-align: center;
+        color: #777;
+        font-style: italic;
+        margin-top: 40px;
+        font-size: 16px;
+      }
+
+      @media (max-width: 768px) {
         table {
-            width: 90%;
-            border-collapse: collapse;
-            margin: 20px auto;
+          width: 100%;
+          font-size: 13px;
         }
-        th, td {
-            padding: 10px;
-            border: 1px solid #ccc;
-            text-align: left;
+
+        th,
+        td {
+          padding: 10px 8px;
         }
-        th {
-            background-color: #f4f4f4;
+
+        h1 {
+          font-size: 22px;
         }
-        h1 { text-align: center; }
-        ul { padding-left: 20px; margin: 0; }
+      }
     </style>
-</head>
-<body>
+  </head>
+
+  <body>
     <h1>Non-Members</h1>
+
     <table>
-        <thead>
-            <tr>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Institution</th>
-                <th>Events</th>
-                <th>Status</th>
-                <th>Registration Date</th>
-                <th>Attended Date</th>
-                <th>Certificate Issued</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for nonmember in nonmembers %}
-            <tr>
-                <td>{{ nonmember.first_name }}</td>
-                <td>{{ nonmember.last_name }}</td>
-                <td>{{ nonmember.institution }}</td>
-                <td>
-                    {% if nonmember.events.all %}
-                        <ul>
-                        {% for event in nonmember.events.all %}
-                            <li>{{ event.title }}</li>
-                        {% endfor %}
-                        </ul>
-                    {% else %}
-                        None
-                    {% endif %}
-                </td>
-                <td>{{ nonmember.status }}</td>
-                <td>{{ nonmember.registration_date|date:"Y-m-d H:i" }}</td>
-                <td>{{ nonmember.attended_date|default:"-"|date:"Y-m-d H:i" }}</td>
-                <td>{{ nonmember.certificate_issued|yesno:"Yes,No" }}</td>
-            </tr>
-            {% empty %}
-            <tr>
-                <td colspan="8" style="text-align:center;">No non-members found.</td>
-            </tr>
-            {% endfor %}
-        </tbody>
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Institution</th>
+          <th>Events</th>
+          <th>Status</th>
+          <th>Registration Date</th>
+          <th>Attended Date</th>
+          <th>Certificate Issued</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for nonmember in nonmembers %}
+        <tr>
+          <td>{{ nonmember.first_name }}</td>
+          <td>{{ nonmember.last_name }}</td>
+          <td>{{ nonmember.institution }}</td>
+          <td>
+            {% if nonmember.events.all %}
+            <ul>
+              {% for event in nonmember.events.all %}
+              <li>{{ event.title }}</li>
+              {% empty %}
+              <li>No events assigned</li>
+              {% endfor %}
+            </ul>
+            {% else %} None {% endif %}
+          </td>
+          <td>{{ nonmember.status }}</td>
+          <td>{{ nonmember.registration_date|date:"Y-m-d H:i" }}</td>
+          <td>{{ nonmember.attended_date|default:"-"|date:"Y-m-d H:i" }}</td>
+          <td>{{ nonmember.certificate_issued|yesno:"Yes,No" }}</td>
+        </tr>
+        {% empty %}
+        <tr>
+          <td colspan="8" class="no-data">No non-members found.</td>
+        </tr>
+        {% endfor %}
+      </tbody>
     </table>
-</body>
+  </body>
 </html>

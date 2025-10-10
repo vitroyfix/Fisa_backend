@@ -1,45 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Students</title>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Students List</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 20px; }
-        table { width: 90%; border-collapse: collapse; margin: 20px auto; }
-        th, td { padding: 10px; border: 1px solid #ccc; text-align: left; vertical-align: top; }
-        th { background-color: #f4f4f4; }
-        h1 { text-align: center; }
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 20px;
+        background-color: #f8f9fa;
+        color: #333;
+      }
+      h1 {
+        text-align: center;
+        font-size: 28px;
+        margin-bottom: 30px;
+      }
+      table {
+        width: 95%;
+        margin: 0 auto;
+        border-collapse: separate;
+        border-spacing: 0;
+        background: #fff;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      }
+      thead {
+        background-color: #4caf50;
+        color: #fff;
+      }
+      th,
+      td {
+        padding: 12px 10px;
+        border-bottom: 1px solid #eee;
+        text-align: left;
+        font-size: 14px;
+        vertical-align: top;
+      }
+      tr:hover {
+        background-color: rgba(106, 212, 73, 0.2);
+        transition: background-color 0.2s ease-in-out;
+      }
+      ul {
+        margin: 0;
+        padding-left: 20px;
+      }
+      li {
+        margin-bottom: 4px;
+      }
+      p {
+        margin: 2px 0;
+        font-size: 14px;
+      }
+      .no-data {
+        text-align: center;
+        font-style: italic;
+        margin-top: 40px;
+        color: #777;
+        font-size: 16px;
+      }
+      @media (max-width: 768px) {
+        table {
+          width: 100%;
+          font-size: 13px;
+        }
+        th,
+        td {
+          padding: 8px 6px;
+        }
+        h1 {
+          font-size: 24px;
+        }
+      }
     </style>
-</head>
-<body>
-    <h1>Students</h1>
+  </head>
+  <body>
+    <h1>Students List</h1>
+
+    {% if students %}
     <table>
-        <thead>
-            <tr>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Events Attended</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for student in students %}
-            <tr>
-                <td>{{ student.admissions.first_name }}</td>
-                <td>{{ student.admissions.last_name }}</td>
-                <td>
-                    {% for event in student_events.student.id %}
-                        {{ event.title }}<br>
-                    {% empty %}
-                        No events
-                    {% endfor %}
-                </td>
-            </tr>
-            {% empty %}
-            <tr>
-                <td colspan="3" style="text-align:center;">No students found.</td>
-            </tr>
-            {% endfor %}
-        </tbody>
+      <thead>
+        <tr>
+          <th>Full Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Gender</th>
+          <th>Date of Birth</th>
+          <th>Admission Date</th>
+          <th>Status</th>
+          <th>Events Attended</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for student in students %}
+        <tr>
+          <td>{{ student.details.full_name }}</td>
+          <td>{{ student.details.email }}</td>
+          <td>{{ student.details.phone }}</td>
+          <td>{{ student.details.gender }}</td>
+          <td>{{ student.details.dob|date:"Y-m-d" }}</td>
+          <td>{{ student.details.admission_date|date:"Y-m-d" }}</td>
+          <td>{{ student.details.status }}</td>
+          <td>
+            {% if student.events_attended %}
+            <ul>
+              {% for event in student.events_attended %}
+              <li>{{ event.title }} ({{ event.time|date:"Y-m-d H:i" }})</li>
+              {% endfor %}
+            </ul>
+            {% else %} No events attended {% endif %}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
     </table>
-</body>
+    {% else %}
+    <p class="no-data">No students found.</p>
+    {% endif %}
+  </body>
 </html>

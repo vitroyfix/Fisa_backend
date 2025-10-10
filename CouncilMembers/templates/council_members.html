@@ -1,55 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Council Members</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        h1 {
-            text-align: center;
-        }
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f8f9fa;
+        color: #333;
+      }
+
+      h1 {
+        text-align: center;
+        margin-top: 40px;
+        font-size: 28px;
+        color: #222;
+      }
+
+      table {
+        width: 90%;
+        margin: 30px auto;
+        border-collapse: separate;
+        border-spacing: 0;
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      }
+
+      thead {
+        background-color: #56c42bff;
+      }
+
+      th {
+        padding: 14px 12px;
+        text-align: left;
+        font-weight: 600;
+        color: #000000ff;
+        font-size: 15px;
+      }
+
+      td {
+        padding: 12px 10px;
+        border-bottom: 1px solid #eee;
+        vertical-align: middle;
+        font-size: 14px;
+        color: #555;
+      }
+
+      tr:hover {
+        background-color: rgba(106, 212, 73, 0.2);
+        transition: background-color 0.2s ease-in-out;
+      }
+      .date {
+        color: #555;
+        font-size: 0.95em;
+      }
+
+      .status {
+        font-weight: 600;
+        padding: 6px 10px;
+        border-radius: 20px;
+        text-transform: capitalize;
+        display: inline-block;
+        font-size: 13px;
+        text-align: center;
+      }
+
+      .no-data {
+        text-align: center;
+        color: #777;
+        font-style: italic;
+        margin-top: 40px;
+        font-size: 16px;
+      }
+
+      @media (max-width: 768px) {
         table {
-            width: 80%;
-            margin: 20px auto;
-            border-collapse: collapse;
+          width: 100%;
+          font-size: 13px;
         }
-        th, td {
-            padding: 10px;
-            border: 1px solid #ccc;
-            text-align: left;
+
+        th,
+        td {
+          padding: 10px 8px;
         }
-        th {
-            background-color: #f4f4f4;
+
+        h1 {
+          font-size: 24px;
         }
+
+        table,
+        thead,
+        tbody,
+        th,
+        td,
+        tr {
+          display: block;
+        }
+
+        thead tr {
+          display: none;
+        }
+
+        tbody tr {
+          margin-bottom: 20px;
+          border: 1px solid #ddd;
+          border-radius: 8px;
+          padding: 12px;
+        }
+
+        td {
+          display: flex;
+          justify-content: space-between;
+          padding: 8px 0;
+        }
+
+        td::before {
+          content: attr(data-label);
+          font-weight: bold;
+          flex: 1;
+          text-align: left;
+        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Council Members</h1>
 
     {% if council_members %}
-        <table>
-            <thead>
-                <tr>
-                    <th>Student</th>
-                    <th>Role / Position</th>
-                    <th>Committee</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for member in council_members %}
-                <tr>
-                    <td>{{ member.student.admissions.first_name }} {{ member.student.admissions.last_name }}</td>
-                    <td>{{ member.role_position }}</td>
-                    <td>{{ member.committee }}</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
+    <table>
+      <thead>
+        <tr>
+          <th>Student Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Role / Position</th>
+          <th>Committee</th>
+          <th>Start Date</th>
+          <th>End Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for member in council_members %}
+        <tr>
+          <td data-label="Student Name">{{ member.student.full_name }}</td>
+          <td data-label="Email">{{ member.student.details.email }}</td>
+          <td data-label="Phone">{{ member.student.details.phone }}</td>
+          <td data-label="position">{{ member.role_position }}</td>
+          <td data-label="Committee">{{ member.committee }}</td>
+          <td data-label="Start Date" class="date">
+            {{ member.start_date|date:"Y-m-d" }}
+          </td>
+          <td data-label="End Date" class="date">
+            {% if member.end_date %}{{ member.end_date|date:"Y-m-d" }}{% else
+            %}Ongoing{% endif %}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
     {% else %}
-        <p style="text-align: center;">No council members found.</p>
+    <p class="no-data">No council members found.</p>
     {% endif %}
-</body>
+  </body>
 </html>

@@ -20,14 +20,14 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('admissions/', include('Admissions.urls')),
-    path('attendees/', include('Attendees.urls')),
-    path('council/', include('CouncilMembers.urls')),
-    path('media/', include('EventMedia.urls')),
-    path('events/', include('Events.urls')),
-    path('nonmembers/', include('NonMembers.urls')),
-    path('students/', include('Student.urls')),
+    path('api/admin/', admin.site.urls),
+    path('api/admissions/', include('Admissions.urls')),
+    path('api/attendees/', include('Attendees.urls')),
+    path('api/council/', include('CouncilMembers.urls')),
+    path('api/media/', include('EventMedia.urls')),
+    path('api/events/', include('Events.urls')),
+    path('api/nonmembers/', include('NonMembers.urls')),
+    path('api/students/', include('Student.urls')),
 ]
 
 

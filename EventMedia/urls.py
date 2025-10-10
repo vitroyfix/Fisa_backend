@@ -1,6 +1,10 @@
-from django.urls import path
-from .views import media_list_view
+from django.urls import path ,include
+from rest_framework.routers import DefaultRouter
+from .views import MediaViewSet
+
+router = DefaultRouter()
+router.register(r'eventmedia', MediaViewSet)
 
 urlpatterns = [
-    path('', media_list_view, name='media_list'),
+    path('', include(router.urls)),
 ]

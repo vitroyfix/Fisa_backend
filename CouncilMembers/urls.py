@@ -1,6 +1,10 @@
-from django.urls import path
-from . import views
+from django.urls import path, include
+from rest_framework.routers import DefaultRouter
+from .views import CouncilViewSet
+
+router = DefaultRouter()
+router.register(r'councils', CouncilViewSet)
 
 urlpatterns = [
-    path('', views.council_view, name='council'),
+    path('', include(router.urls)),
 ]
