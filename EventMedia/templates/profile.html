@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Media</title>
+    <style>
+        body {
+            font-family: "Arial", sans-serif;
+            background-color: #f4f6f9;
+            padding: 40px;
+        }
+
+        .profile-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h2, h3 {
+            text-align: center;
+        }
+
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+            display: block;
+        }
+
+        select, input[type="file"], button {
+            width: 100%;
+            margin: 8px 0 15px;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .divider {
+            height: 1px;
+            background: #ddd;
+            margin: 20px 0;
+        }
+
+        .media-grid {
+            column-count: 3;
+            column-gap: 15px;
+        }
+
+        .media-card {
+            display: inline-block;
+            margin-bottom: 15px;
+            width: 100%;
+            break-inside: avoid;
+            border-radius: 10px;
+            overflow: hidden;
+            background: #fafafa;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        .media-card img {
+            width: 100%;
+            border-bottom: 1px solid #ddd;
+            display: block;
+        }
+
+        .media-card h4, .media-card h5 {
+            margin: 10px;
+            font-size: 14px;
+        }
+
+        .view-all-btn {
+            display: block;
+            margin: 20px auto;
+            width: auto;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        .student-section {
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+<div class="profile-container">
+    <h2>Upload Profile & Cover Photos</h2>
+    <form method="POST" enctype="multipart/form-data" action="/api/media/personalmedia/">
+        {% csrf_token %}
+
+        <label for="student">Select Student:</label>
+        <select id="student" name="student" required>
+            <option value="">-- Select a student --</option>
+            {% for student in students %}
+                <option value="{{ student.id }}" {% if student.id|stringformat:"s" == selected_student|stringformat:"s" %}selected{% endif %}>
+                    {{ student.full_name }}
+                </option>
+            {% endfor %}
+        </select>
+
+        <label for="image">Profile Image:</label>
+        <input type="file" id="image" name="image" accept="image/*" required>
+
+        <label for="cover_image">Cover Image:</label>
+        <input type="file" id="cover_image" name="cover_image" accept="image/*">
+
+        <button type="submit">Upload</button>
+    </form>
+
+    <div class="divider"></div>
+
+    {% if personal_media_list %}
+        {% regroup personal_media_list by student as student_list %}
+        {% for student_group in student_list %}
+            <div class="student-section">
+                <h3>Uploads for {{ student_group.grouper.full_name }}</h3>
+                <div class="media-grid">
+                    {% for media in student_group.list %}
+                        <div class="media-card">
+                            {% if media.image %}
+                                <img src="{{ media.image.url }}" alt="Profile Image">
+                                <h4>Profile Image</h4>
+                            {% endif %}
+                            {% if media.cover_image %}
+                                <img src="{{ media.cover_image.url }}" alt="Cover Image">
+                                <h4>Cover Image</h4>
+                            {% endif %}
+                            <h5>Uploaded: {{ media.created_at|date:"M d, Y H:i" }}</h5>
+                        </div>
+                    {% endfor %}
+                </div>
+
+                <form method="GET" action="/api/media/personalmedia/">
+                    <input type="hidden" name="student" value="{{ student_group.grouper.id }}">
+                    <button type="submit" class="view-all-btn">View All Uploads for {{ student_group.grouper.full_name }}</button>
+                </form>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p style="text-align:center; color:#777;">No images uploaded yet.</p>
+    {% endif %}
+</div>
+</body>
+</html>

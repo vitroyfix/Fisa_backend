@@ -1,188 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Attendance Records</title>
-    <style>
-      body {
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f8f9fa;
-        color: #333;
-      }
+<head>
+  <meta charset="UTF-8">
+  <title>Attendance Records</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 28px;
+      color: #222;
+    }
+    table {
+      width: 90%;
+      margin: 30px auto;
+      border-collapse: separate;
+      border-spacing: 0;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    }
+    thead {
+      background-color: #56c42bff;
+    }
+    th {
+      padding: 14px 12px;
+      text-align: left;
+      font-weight: 600;
+      color: #fff;
+      font-size: 15px;
+    }
+    td {
+      padding: 12px 10px;
+      border-bottom: 1px solid #eee;
+      vertical-align: middle;
+      font-size: 14px;
+      color: #555;
+    }
+    tr:hover {
+      background-color: rgba(106, 212, 73, 0.2);
+      transition: background-color 0.2s ease-in-out;
+    }
+    .status {
+      font-weight: 600;
+      padding: 4px 8px;
+      border-radius: 12px;
+      text-transform: capitalize;
+      display: inline-block;
+      font-size: 13px;
+      text-align: center;
+    }
+    .status.present {
+      background-color: #e6f4ea;
+      color: #2e7d32;
+    }
+    .status.absent {
+      background-color: #fdecea;
+      color: #c62828;
+    }
+    .center {
+      text-align: center;
+    }
+    .no-data {
+      text-align: center;
+      color: #777;
+      font-style: italic;
+      margin-top: 40px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Attendance Records</h1>
 
-      h1 {
-        text-align: center;
-        margin-top: 40px;
-        font-size: 28px;
-        color: #222;
-      }
-
-      table {
-        width: 90%;
-        margin: 30px auto;
-        border-collapse: separate;
-        border-spacing: 0;
-        background: white;
-        border-radius: 12px;
-        overflow: hidden;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-      }
-
-      thead {
-        background-color: #56c42bff;
-      }
-
-      th {
-        padding: 14px 12px;
-        text-align: left;
-        font-weight: 600;
-        color: #fff;
-        font-size: 15px;
-      }
-
-      td {
-        padding: 12px 10px;
-        border-bottom: 1px solid #eee;
-        vertical-align: middle;
-        font-size: 14px;
-        color: #555;
-      }
-
-      tr:hover {
-        background-color: rgba(106, 212, 73, 0.2);
-        transition: background-color 0.2s ease-in-out;
-      }
-
-      .status {
-        font-weight: 600;
-        padding: 4px 8px;
-        border-radius: 12px;
-        text-transform: capitalize;
-        display: inline-block;
-        font-size: 13px;
-        text-align: center;
-      }
-
-      .status.present {
-        background-color: #e6f4ea;
-        color: #2e7d32;
-      }
-
-      .status.absent {
-        background-color: #fdecea;
-        color: #c62828;
-      }
-
-      .center {
-        text-align: center;
-      }
-
-      .no-data {
-        text-align: center;
-        color: #777;
-        font-style: italic;
-        margin-top: 40px;
-        font-size: 16px;
-      }
-
-      @media (max-width: 768px) {
-        table {
-          width: 100%;
-          font-size: 13px;
-        }
-
-        th,
-        td {
-          padding: 10px 8px;
-        }
-
-        h1 {
-          font-size: 24px;
-        }
-
-        table,
-        thead,
-        tbody,
-        th,
-        td,
-        tr {
-          display: block;
-        }
-
-        thead tr {
-          display: none;
-        }
-
-        tbody tr {
-          margin-bottom: 20px;
-          border: 1px solid #ddd;
-          border-radius: 8px;
-          padding: 12px;
-        }
-
-        td {
-          display: flex;
-          justify-content: space-between;
-          padding: 8px 0;
-        }
-
-        td::before {
-          content: attr(data-label);
-          font-weight: bold;
-          flex: 1;
-          text-align: left;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <h1>Attendance Records</h1>
-
-    {% if attend_list %}
-    <table>
-      <thead>
-        <tr>
-          <th>Student</th>
-          <th>Event</th>
-          <th>Status</th>
-          <th>Registration Date</th>
-          <th>Attended Date</th>
-          <th>Certificate Issued</th>
-          <th>Feedback</th>
-        </tr>
-      </thead>
-      <tbody>
-        {% for attend in attend_list %}
-        <tr>
-          <td data-label="Student">{{ attend.student.full_name }}</td>
-          <td data-label="Event">{{ attend.event.title }}</td>
-          <td data-label="Status">
-            <span class="status {{ attend.status|lower }}"
-              >{{ attend.status|capfirst }}</span
-            >
-          </td>
-          <td data-label="Registration Date">
-            {{ attend.registration_date|date:"Y-m-d H:i" }}
-          </td>
-          <td data-label="Attended Date">
-            {% if attend.attended_date %}{{ attend.attended_date|date:"Y-m-d
-            H:i" }}{% else %}-{% endif %}
-          </td>
-          <td data-label="Certificate Issued" class="center">
-            {% if attend.certificate_issued %}&#x2713;{% else %}&#x2717;{% endif
-            %}
-          </td>
-          <td data-label="Feedback">
-            {% if attend.feedback %}{{ attend.feedback }}{% else %}-{% endif %}
-          </td>
-        </tr>
-        {% endfor %}
-      </tbody>
-    </table>
-    {% else %}
-    <p class="no-data">No attendance records found.</p>
-    {% endif %}
-  </body>
+  {% if attend_list %}
+  <table>
+    <thead>
+      <tr>
+        <th>Student</th>
+        <th>Event</th>
+        <th>Status</th>
+        <th>Registration Date</th>
+        <th>Attended Date</th>
+        <th>Certificate Issued</th>
+        <th>Feedback</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for attend in attend_list %}
+      <tr>
+        <td data-label="Student">{{ attend.student.full_name }}</td>
+        <td data-label="Event">{{ attend.event.title }}</td>
+        <td data-label="Status">
+          <span class="status {{ attend.status|lower }}">{{ attend.status|capfirst }}</span>
+        </td>
+        <td data-label="Registration Date">{{ attend.registration_date|date:"Y-m-d H:i" }}</td>
+        <td data-label="Attended Date">
+          {% if attend.attended_date %}
+            {{ attend.attended_date|date:"Y-m-d H:i" }}
+          {% else %}
+            -
+          {% endif %}
+        </td>
+        <td data-label="Certificate Issued" class="center">
+          {% if attend.certificate_issued %}
+            &#x2713;
+          {% else %}
+            &#x2717;
+          {% endif %}
+        </td>
+        <td data-label="Feedback">
+          {% if attend.feedback %}
+            {{ attend.feedback }}
+          {% else %}
+            -
+          {% endif %}
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <p class="no-data">No attendance records found.</p>
+  {% endif %}
+</body>
 </html>

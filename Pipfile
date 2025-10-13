@@ -9,6 +9,9 @@ djangorestframework = "*"
 python-decouple = "*"
 mysqlclient = "*"
 pymysql = "*"
+django-cors-headers = "*"
+pillow = "*"
+djangorestframework-simplejwt = "*"
 
 [dev-packages]
 
