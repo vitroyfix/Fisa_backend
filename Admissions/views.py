@@ -7,7 +7,7 @@ class AdmissionViewSet(viewsets.ModelViewSet):
     queryset = Admission.objects.all()
     serializer_class = AdmissionSerializer
     renderer_classes = [renderers.JSONRenderer, renderers.TemplateHTMLRenderer]
-    template_name = "admissions.html"  
+    template_name = "admissions.html"
 
     def list(self, request, *args, **kwargs):
         queryset = self.get_queryset()
@@ -16,24 +16,27 @@ class AdmissionViewSet(viewsets.ModelViewSet):
         if request.accepted_renderer.format == "html":
             return Response({"admissions": queryset}, template_name=self.template_name)
 
-      
         return Response(serializer.data)
 
     def create(self, request, *args, **kwargs):
-        serializer = self.get_serializer(data=request.data)
+        # Ensure new submissions have status "pending"
+        data = request.data.copy()
+        data['status'] = 'pending'
+
+        serializer = self.get_serializer(data=data)
         if serializer.is_valid():
             admission = serializer.save()
 
             if request.accepted_renderer.format == "html":
                 context = {
                     "admissions": self.get_queryset(),
-                    "message": "Student registered successfully",
+                    "message": "Student registered successfully. Waiting for admin approval.",
                 }
                 return Response(context, template_name=self.template_name)
 
             return Response(
                 {
-                    "message": "Student registered successfully",
+                    "message": "Student registered successfully. Waiting for admin approval.",
                     "student": self.get_serializer(admission).data,
                 },
                 status=status.HTTP_201_CREATED,

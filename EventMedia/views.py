@@ -1,4 +1,4 @@
-from rest_framework import viewsets, renderers, permissions, status
+from rest_framework import viewsets, renderers, permissions, status, serializers
 from rest_framework.response import Response
 from rest_framework.decorators import action
 from django.shortcuts import redirect
@@ -43,6 +43,8 @@ class PersonalMediaViewSet(viewsets.ModelViewSet):
         if student_id and student_id != "None":
             queryset = queryset.filter(student__id=student_id)
 
+        serializer = self.get_serializer(queryset, many=True, context={"request": request})
+
         if request.accepted_renderer.format == "html":
             students = Student.objects.all().order_by(
                 "admissions__first_name", "admissions__last_name"
@@ -56,11 +58,10 @@ class PersonalMediaViewSet(viewsets.ModelViewSet):
                 template_name=self.template_name,
             )
 
-        serializer = self.get_serializer(queryset, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
     def create(self, request, *args, **kwargs):
-        """Handle uploads with a required student selection."""
+        """Handle uploads with duplicate check and required student."""
         serializer = self.get_serializer(data=request.data, context={"request": request})
 
         if not serializer.is_valid():
@@ -73,7 +74,11 @@ class PersonalMediaViewSet(viewsets.ModelViewSet):
                 status=status.HTTP_400_BAD_REQUEST,
             )
 
-        self.perform_create(serializer)
+        try:
+            # The serializer handles duplicate checking internally
+            self.perform_create(serializer)
+        except serializers.ValidationError as e:
+            return Response(e.detail, status=status.HTTP_400_BAD_REQUEST)
 
         if request.accepted_renderer.format == "html":
             return redirect(f"/api/media/personalmedia/?student={student.id}")
@@ -84,10 +89,9 @@ class PersonalMediaViewSet(viewsets.ModelViewSet):
         """Delete a PersonalMedia object using detail URL (/id/)"""
         return super().destroy(request, *args, **kwargs)
 
-    
     @action(detail=False, methods=['delete'])
     def bulk_delete(self, request):
-     
+        """Delete a single PersonalMedia item via request data id"""
         media_id = request.data.get("id")
         if not media_id:
             return Response(
