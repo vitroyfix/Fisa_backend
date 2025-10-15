@@ -21,7 +21,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('api/admin/', admin.site.urls),
-    path('api/admissions/', include('Admissions.urls')),  # <-- this makes /api/admissions/
+    path('api/admissions/', include('Admissions.urls')),  
     path('api/attendees/', include('Attendees.urls')),
     path('api/council/', include('CouncilMembers.urls')),
     path('api/media/', include('EventMedia.urls')),
